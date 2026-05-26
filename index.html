@@ -1,0 +1,1459 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fink Spenglerei &amp; Bedachung · Service rund ums Dach aus Meisterhand · Aichach</title>
+<meta name="description" content="Fink Spenglerei &amp; Bedachung in Aichach/Oberbernbach. Spengler- und Bedachungsarbeiten in Kupfer, Titanzink, Edelstahl. Komplette Dachsanierung, Dachausbau, Flachdach. Meisterbetrieb seit Jahren." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --color-copper:#b87333;
+    --color-copper-light:#d4956a;
+    --color-copper-dark:#7a4a1a;
+    --color-copper-bg:#f5e6d3;
+    --color-copper-nav:#c8a882;
+    --color-dark:#1c1410;
+    --color-dark-2:#2d2520;
+    --color-warm-white:#f9f6f1;
+    --color-linen:#ede8e0;
+    --color-body:#5a4a3a;
+    --color-body-soft:#8a7666;
+    --color-quote-bg:#fdf8f2;
+    --color-border:rgba(28,20,16,.12);
+    --color-border-soft:rgba(28,20,16,.06);
+
+    --xs:4px; --sm:8px; --md:16px; --lg:24px; --xl:40px; --2xl:64px; --3xl:96px;
+    --r-sm:4px; --r-md:8px; --r-lg:12px; --r-pill:24px;
+
+    --serif:"Playfair Display", "Iowan Old Style", Georgia, serif;
+    --sans:"Source Sans 3", -apple-system, "Segoe UI", system-ui, sans-serif;
+
+    --shadow-sm:0 1px 2px rgba(28,20,16,.04);
+    --shadow-md:0 4px 16px -4px rgba(28,20,16,.08), 0 1px 2px rgba(28,20,16,.04);
+    --shadow-lg:0 12px 40px -8px rgba(28,20,16,.16), 0 2px 6px rgba(28,20,16,.06);
+
+    --nav-h:64px;
+    --container:1180px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth; scroll-padding-top:calc(var(--nav-h) + 12px)}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.7;
+    color:var(--color-body);
+    background:var(--color-warm-white);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img{max-width:100%; display:block}
+  a{color:inherit; text-decoration:none}
+  button{font:inherit; cursor:pointer; border:0; background:transparent; color:inherit}
+  h1,h2,h3,h4{font-family:var(--serif); color:var(--color-dark); margin:0; font-weight:500; letter-spacing:-.005em}
+  p{margin:0}
+  ::selection{background:var(--color-copper); color:#fff}
+
+  /* ---------- Layout ---------- */
+  .container{max-width:var(--container); margin:0 auto; padding:0 24px}
+  section{padding:var(--3xl) 0; position:relative}
+  @media (max-width:768px){
+    section{padding:64px 0}
+  }
+
+  .eyebrow{
+    font-size:11px; font-weight:500; text-transform:uppercase;
+    letter-spacing:.18em; color:var(--color-copper-dark);
+    display:inline-flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{
+    content:""; width:24px; height:1px; background:var(--color-copper);
+  }
+  .eyebrow.center{justify-content:center}
+  .eyebrow.center::after{
+    content:""; width:24px; height:1px; background:var(--color-copper);
+  }
+
+  .section-title{
+    font-size:clamp(28px, 3.4vw, 44px);
+    font-weight:700;
+    line-height:1.1;
+    letter-spacing:-.02em;
+    color:var(--color-dark);
+    margin-top:14px;
+    max-width:18ch;
+  }
+  .section-title.center{margin-left:auto; margin-right:auto; text-align:center; max-width:24ch}
+  .section-lead{
+    font-size:18px; color:var(--color-body); margin-top:20px;
+    max-width:62ch; line-height:1.65;
+  }
+  .section-lead.center{margin-left:auto; margin-right:auto; text-align:center}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:13px 24px;
+    border-radius:var(--r-md);
+    font-size:15px; font-weight:500;
+    transition:all .2s ease;
+    line-height:1;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--color-copper); color:#fff; box-shadow:var(--shadow-sm)}
+  .btn-primary:hover{background:var(--color-copper-dark); transform:translateY(-1px); box-shadow:var(--shadow-md)}
+  .btn-secondary{background:transparent; color:var(--color-copper); border:1.5px solid var(--color-copper)}
+  .btn-secondary:hover{background:var(--color-copper); color:#fff}
+  .btn-ghost{background:transparent; color:var(--color-body); border:1px solid var(--color-border)}
+  .btn-ghost:hover{border-color:var(--color-copper); color:var(--color-copper-dark)}
+  .btn .arrow{transition:transform .2s ease}
+  .btn:hover .arrow{transform:translateX(3px)}
+
+  /* ---------- Badges ---------- */
+  .badge{
+    display:inline-flex; align-items:center; gap:6px;
+    padding:6px 12px; border-radius:var(--r-pill);
+    font-size:12px; font-weight:500; letter-spacing:.02em;
+    white-space:nowrap;
+  }
+  .badge-copper{background:var(--color-copper-bg); color:var(--color-copper-dark)}
+  .badge-dark{background:var(--color-dark-2); color:var(--color-copper-nav)}
+
+  /* ---------- Navigation ---------- */
+  .nav{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    height:var(--nav-h);
+    background:rgba(28,20,16,.96);
+    backdrop-filter:saturate(150%) blur(12px);
+    -webkit-backdrop-filter:saturate(150%) blur(12px);
+    border-bottom:1px solid rgba(200,168,130,.1);
+  }
+  .nav-inner{
+    max-width:var(--container); margin:0 auto;
+    padding:0 24px;
+    height:100%;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:24px;
+  }
+  .brand{
+    display:flex; align-items:center; gap:12px;
+    color:var(--color-copper-nav);
+  }
+  .brand-mark{
+    width:34px; height:34px; flex-shrink:0;
+    border-radius:6px;
+    background:linear-gradient(135deg, var(--color-copper) 0%, var(--color-copper-dark) 100%);
+    display:grid; place-items:center;
+    color:#fff;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.18), 0 1px 2px rgba(0,0,0,.25);
+  }
+  .brand-name{
+    font-family:var(--serif); font-size:18px; font-weight:500;
+    color:var(--color-copper-nav); letter-spacing:.005em;
+    line-height:1;
+  }
+  .brand-sub{
+    display:block; font-family:var(--sans); font-size:10px;
+    font-weight:400; color:#a09080; letter-spacing:.18em;
+    text-transform:uppercase; margin-top:4px;
+    white-space:nowrap;
+  }
+  .nav-links{
+    display:flex; align-items:center; gap:6px;
+    list-style:none; padding:0; margin:0;
+  }
+  .nav-links a{
+    font-size:14px; color:#a09080; font-weight:400;
+    padding:8px 14px; border-radius:6px;
+    transition:color .18s ease, background .18s ease;
+    position:relative;
+  }
+  .nav-links a:hover{color:var(--color-copper-nav)}
+  .nav-links a.active{color:#fff}
+  .nav-links a.active::after{
+    content:""; position:absolute; left:14px; right:14px; bottom:2px;
+    height:1px; background:var(--color-copper);
+  }
+  .nav-cta{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:8px 16px; border-radius:6px;
+    background:var(--color-copper); color:#fff !important;
+    font-size:13px; font-weight:500;
+    white-space:nowrap;
+    transition:background .18s ease;
+  }
+  .nav-cta:hover{background:var(--color-copper-light); color:#fff !important}
+  .nav-toggle{
+    display:none;
+    width:40px; height:40px; border-radius:6px;
+    color:var(--color-copper-nav);
+    align-items:center; justify-content:center;
+  }
+  .nav-toggle svg{width:22px; height:22px}
+
+  @media (max-width:880px){
+    .nav-links, .nav-cta-wrap{display:none}
+    .nav-toggle{display:flex}
+    .nav.open .nav-mobile{display:flex}
+  }
+
+  .nav-mobile{
+    display:none;
+    position:fixed; top:var(--nav-h); left:0; right:0;
+    background:var(--color-dark);
+    flex-direction:column; padding:24px;
+    border-bottom:1px solid rgba(200,168,130,.1);
+    z-index:49;
+    animation:slideDown .25s ease;
+  }
+  @keyframes slideDown{from{opacity:0; transform:translateY(-8px)} to{opacity:1; transform:translateY(0)}}
+  .nav-mobile a{
+    padding:14px 4px; color:var(--color-copper-nav);
+    font-size:16px; border-bottom:1px solid rgba(200,168,130,.08);
+  }
+  .nav-mobile a:last-of-type{border-bottom:0}
+  .nav-mobile .btn-primary{margin-top:16px; justify-content:center; color:#fff}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding-top:calc(var(--nav-h) + 80px);
+    padding-bottom:120px;
+    position:relative;
+    overflow:hidden;
+    background:
+      radial-gradient(1200px 600px at 85% -10%, rgba(184,115,51,.10), transparent 60%),
+      radial-gradient(800px 500px at -10% 110%, rgba(184,115,51,.06), transparent 60%),
+      var(--color-warm-white);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr 1fr;
+    gap:64px;
+    align-items:center;
+  }
+  @media (max-width:980px){
+    .hero{padding-top:calc(var(--nav-h) + 48px); padding-bottom:64px}
+    .hero-grid{grid-template-columns:1fr; gap:48px}
+  }
+  .hero h1{
+    font-family:var(--serif);
+    font-size:clamp(40px, 6.2vw, 68px);
+    line-height:1.04;
+    font-weight:700;
+    letter-spacing:-.025em;
+    color:var(--color-dark);
+    margin-top:20px;
+  }
+  .hero h1 em{
+    font-style:italic; font-weight:400;
+    color:var(--color-copper-dark);
+  }
+  .hero p.lead{
+    margin-top:24px;
+    font-size:18px; line-height:1.65;
+    color:var(--color-body);
+    max-width:46ch;
+  }
+  .hero-cta{
+    margin-top:36px;
+    display:flex; gap:14px; flex-wrap:wrap; align-items:center;
+  }
+  .hero-meta{
+    margin-top:48px;
+    display:flex; gap:32px; flex-wrap:wrap;
+    padding-top:28px;
+    border-top:1px solid var(--color-border-soft);
+  }
+  .hero-meta-item{
+    display:flex; flex-direction:column; gap:4px;
+  }
+  .hero-meta-item .k{font-size:11px; text-transform:uppercase; letter-spacing:.14em; color:var(--color-body-soft)}
+  .hero-meta-item .v{font-family:var(--serif); font-size:17px; color:var(--color-dark); font-weight:500; white-space:nowrap}
+
+  /* Hero visual */
+  .hero-visual{
+    position:relative;
+    aspect-ratio:4/5;
+    border-radius:var(--r-lg);
+    overflow:hidden;
+    background:var(--color-linen);
+    box-shadow:var(--shadow-lg);
+  }
+  .hero-visual img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:center 35%;
+  }
+  .hero-visual::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(28,20,16,.22) 0%, transparent 35%, transparent 65%, rgba(28,20,16,.30) 100%);
+    pointer-events:none;
+  }
+  .hero-caption{
+    position:absolute; bottom:20px; left:22px;
+    color:rgba(255,255,255,.95); z-index:2;
+    display:flex; flex-direction:column; align-items:flex-start; gap:6px;
+    text-shadow:0 1px 4px rgba(28,20,16,.45);
+  }
+  .hero-caption .t{font-family:var(--sans); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.78)}
+  .hero-caption strong{display:block; font-family:var(--serif); font-size:22px; font-weight:500; letter-spacing:-.01em; margin-top:4px}
+  .hero-caption .corner{
+    font-family:ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size:10px; letter-spacing:.08em; color:rgba(255,255,255,.85);
+    padding:6px 10px; border:1px solid rgba(255,255,255,.3); border-radius:4px;
+    backdrop-filter:blur(6px); background:rgba(28,20,16,.35);
+  }
+
+  .hero-floating{
+    position:absolute;
+    background:#fff;
+    border-radius:var(--r-lg);
+    padding:16px 18px;
+    box-shadow:var(--shadow-lg);
+    display:flex; align-items:center; gap:14px;
+    border:1px solid var(--color-border-soft);
+  }
+  .hero-floating .icon{
+    width:40px; height:40px; border-radius:8px;
+    background:var(--color-copper-bg); color:var(--color-copper-dark);
+    display:grid; place-items:center;
+  }
+  .hero-floating .icon svg{width:22px; height:22px}
+  .hero-floating .meta .t{font-size:11px; text-transform:uppercase; letter-spacing:.12em; color:var(--color-body-soft)}
+  .hero-floating .meta .v{font-family:var(--serif); font-size:16px; color:var(--color-dark); font-weight:500; line-height:1.2; margin-top:2px}
+
+  .hero-floating.top{top:24px; right:-20px}
+  .hero-floating.bottom{bottom:-24px; left:-20px}
+  @media (max-width:980px){
+    .hero-floating.top{top:16px; right:16px}
+    .hero-floating.bottom{bottom:-20px; left:16px}
+  }
+
+  /* ---------- About / trust ---------- */
+  .about{background:var(--color-warm-white); padding-top:48px}
+  .trust-grid{
+    margin-top:48px;
+    display:grid; grid-template-columns:repeat(3, 1fr);
+    gap:24px;
+  }
+  @media (max-width:768px){.trust-grid{grid-template-columns:1fr}}
+  .trust-card{
+    padding:32px;
+    background:#fff;
+    border:1px solid var(--color-border-soft);
+    border-radius:var(--r-lg);
+    display:flex; flex-direction:column; gap:14px;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .trust-card:hover{transform:translateY(-2px); box-shadow:var(--shadow-md); border-color:var(--color-copper-light)}
+  .trust-card .num{
+    font-family:var(--serif); font-size:36px; color:var(--color-copper);
+    font-weight:500; line-height:1; letter-spacing:-.02em;
+  }
+  .trust-card h3{font-size:18px; color:var(--color-dark)}
+  .trust-card p{font-size:14.5px; color:var(--color-body); line-height:1.6}
+
+  /* ---------- Services ---------- */
+  .services{background:var(--color-linen)}
+  .services-head{
+    display:grid; grid-template-columns:1fr auto;
+    gap:32px; align-items:end;
+    margin-bottom:48px;
+  }
+  @media (max-width:768px){.services-head{grid-template-columns:1fr}}
+
+  .services-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr);
+    gap:20px;
+  }
+  @media (max-width:980px){.services-grid{grid-template-columns:repeat(2, 1fr)}}
+  @media (max-width:520px){.services-grid{grid-template-columns:1fr}}
+
+  .service-card{
+    background:#fff;
+    border:.5px solid var(--color-border);
+    border-radius:var(--r-lg);
+    padding:24px;
+    display:flex; flex-direction:column; gap:14px;
+    transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    position:relative; overflow:hidden;
+  }
+  .service-card::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:2px;
+    background:var(--color-copper);
+    transform:scaleX(0); transform-origin:left;
+    transition:transform .3s ease;
+  }
+  .service-card:hover{transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:var(--color-copper-light)}
+  .service-card:hover::before{transform:scaleX(1)}
+  .service-icon{
+    width:44px; height:44px; border-radius:10px;
+    background:var(--color-copper-bg); color:var(--color-copper-dark);
+    display:grid; place-items:center;
+  }
+  .service-icon svg{width:24px; height:24px; stroke-width:1.6}
+  .service-card h3{font-family:var(--sans); font-size:14px; font-weight:600; color:var(--color-dark); letter-spacing:.01em}
+  .service-card .desc{font-size:13px; line-height:1.55; color:var(--color-body-soft)}
+
+  .services-list{
+    margin-top:64px;
+    background:#fff;
+    border:1px solid var(--color-border-soft);
+    border-radius:var(--r-lg);
+    padding:40px 48px;
+  }
+  @media (max-width:680px){.services-list{padding:28px 24px}}
+  .services-list h3{
+    font-size:14px; font-family:var(--sans);
+    color:var(--color-copper-dark);
+    text-transform:uppercase; letter-spacing:.16em; font-weight:600;
+    margin-bottom:24px;
+  }
+  .services-list ul{
+    columns:2; column-gap:48px;
+    list-style:none; padding:0; margin:0;
+  }
+  @media (max-width:680px){.services-list ul{columns:1}}
+  .services-list li{
+    break-inside:avoid;
+    padding:12px 0 12px 24px;
+    border-bottom:1px solid var(--color-border-soft);
+    color:var(--color-body);
+    font-size:15px;
+    position:relative;
+  }
+  .services-list li::before{
+    content:""; position:absolute; left:0; top:50%; transform:translateY(-50%);
+    width:8px; height:8px; border-radius:50%;
+    background:var(--color-copper);
+    box-shadow:0 0 0 3px var(--color-copper-bg);
+  }
+
+  /* ---------- Materials ---------- */
+  .materials{background:var(--color-warm-white)}
+  .mat-layout{
+    display:grid; grid-template-columns:1fr 1.2fr;
+    gap:64px; align-items:center;
+  }
+  @media (max-width:880px){.mat-layout{grid-template-columns:1fr; gap:40px}}
+  .mat-visual{
+    aspect-ratio:1/1;
+    border-radius:var(--r-lg);
+    background:
+      conic-gradient(from 135deg at 50% 50%,
+        #c8884a 0deg, #b87333 60deg, #a26429 120deg, #7a4a1a 180deg,
+        #a26429 240deg, #b87333 300deg, #c8884a 360deg);
+    box-shadow:var(--shadow-lg);
+    position:relative;
+    overflow:hidden;
+  }
+  .mat-visual::before{
+    content:""; position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(45deg, rgba(255,255,255,.08) 0 1px, transparent 1px 8px),
+      repeating-linear-gradient(-45deg, rgba(28,20,16,.10) 0 1px, transparent 1px 12px);
+  }
+  .mat-visual .badge{
+    position:absolute; bottom:24px; left:24px;
+    background:rgba(28,20,16,.86); color:var(--color-copper-nav);
+    backdrop-filter:blur(8px);
+  }
+  .mat-list{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:36px}
+  @media (max-width:520px){.mat-list{grid-template-columns:1fr}}
+  .mat-item{
+    display:flex; align-items:center; gap:14px;
+    padding:18px 20px;
+    background:#fff;
+    border:1px solid var(--color-border-soft);
+    border-radius:var(--r-md);
+    transition:border-color .2s, transform .2s;
+  }
+  .mat-item:hover{border-color:var(--color-copper); transform:translateX(2px)}
+  .mat-swatch{
+    width:28px; height:28px; border-radius:6px; flex-shrink:0;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 0 rgba(0,0,0,.15);
+  }
+  .mat-item .name{font-family:var(--serif); font-size:17px; color:var(--color-dark); font-weight:500}
+  .mat-item .sub{font-size:12px; color:var(--color-body-soft); margin-top:2px; text-transform:uppercase; letter-spacing:.08em}
+
+  /* ---------- References ---------- */
+  .references{background:var(--color-linen)}
+  .ref-grid{
+    margin-top:48px;
+    display:grid; grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+  }
+  @media (max-width:880px){.ref-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.ref-grid{grid-template-columns:1fr}}
+
+  .ref-card{
+    background:#fff;
+    border-radius:var(--r-lg);
+    overflow:hidden;
+    border:1px solid var(--color-border-soft);
+    transition:transform .25s ease, box-shadow .25s ease;
+    cursor:pointer;
+  }
+  .ref-card:hover{transform:translateY(-3px); box-shadow:var(--shadow-md)}
+  .ref-img{
+    aspect-ratio:4/3;
+    background:var(--color-linen);
+    position:relative;
+    overflow:hidden;
+  }
+  .ref-img img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    transition:transform .5s ease;
+  }
+  .ref-card:hover .ref-img img{transform:scale(1.04)}
+  .ref-img .ph-pattern{
+    position:absolute; inset:0;
+  }
+  .ref-img.ph-1, .ref-img.ph-2, .ref-img.ph-3,
+  .ref-img.ph-4, .ref-img.ph-5, .ref-img.ph-6{display:none}
+  .ref-img .badge{position:absolute; top:16px; left:16px; background:rgba(28,20,16,.86); color:var(--color-copper-nav); backdrop-filter:blur(6px)}
+  .ref-body{padding:20px 22px 24px}
+  .ref-body h3{font-size:18px; color:var(--color-dark); margin-bottom:6px}
+  .ref-body p{font-size:13.5px; color:var(--color-body-soft)}
+
+  .ref-feature{
+    margin-top:32px;
+    background:#fff;
+    border:1px solid var(--color-border-soft);
+    border-radius:var(--r-lg);
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:280px 1fr auto;
+    align-items:center;
+    gap:0;
+  }
+  @media (max-width:680px){.ref-feature{grid-template-columns:1fr}}
+  .ref-feature-img{
+    position:relative;
+    align-self:stretch;
+    min-height:160px;
+    background:var(--color-linen);
+    overflow:hidden;
+  }
+  @media (max-width:680px){.ref-feature-img{aspect-ratio:16/9; min-height:0}}
+  .ref-feature-img img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+  }
+  .ref-feature .label{font-size:11px; text-transform:uppercase; letter-spacing:.16em; color:var(--color-copper-dark); font-weight:600}
+  .ref-feature .name{font-family:var(--serif); font-size:24px; color:var(--color-dark); margin-top:4px; font-weight:500}
+  .ref-feature .desc{font-size:14px; color:var(--color-body-soft); margin-top:4px}
+  .ref-feature-text{flex:1; min-width:240px; padding:24px 28px}
+  .ref-feature > .badge-dark{margin:0 28px 0 0}
+  @media (max-width:680px){
+    .ref-feature > .badge-dark{margin:0 24px 24px}
+    .ref-feature-text{padding:20px 24px 8px}
+  }
+
+  .quote-feature{
+    margin-top:48px;
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:0;
+    background:var(--color-quote-bg);
+    border-left:3px solid var(--color-copper);
+    border-radius:0 var(--r-md) var(--r-md) 0;
+    overflow:hidden;
+    box-shadow:var(--shadow-sm);
+  }
+  @media (max-width:680px){.quote-feature{grid-template-columns:1fr}}
+  .quote-feature .qf-img{
+    position:relative;
+    overflow:hidden;
+    background:var(--color-linen);
+  }
+  @media (max-width:680px){.quote-feature .qf-img{aspect-ratio:4/3}}
+  .quote-feature .qf-img img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:center 40%;
+  }
+  .quote-feature .qf-img .badge{
+    position:absolute; top:14px; left:14px;
+    background:rgba(28,20,16,.86); color:var(--color-copper-nav);
+    backdrop-filter:blur(6px);
+  }
+  .quote-feature .qf-text{
+    padding:40px 44px;
+    margin:0;
+    display:flex; flex-direction:column; justify-content:center;
+    font-family:var(--serif);
+    font-size:22px; font-style:italic;
+    color:var(--color-dark);
+    line-height:1.5;
+  }
+  @media (max-width:680px){.quote-feature .qf-text{padding:28px 26px; font-size:19px}}
+  .quote-feature .qf-text .qf-mark{
+    font-family:var(--serif); font-size:64px; line-height:.5;
+    color:var(--color-copper); font-style:normal;
+    margin-bottom:10px; display:block;
+  }
+  .quote-feature .qf-text .quote-author{
+    display:block;
+    margin-top:18px;
+    font-family:var(--sans); font-style:normal;
+    font-size:12px; color:var(--color-body-soft);
+    text-transform:uppercase; letter-spacing:.14em;
+    font-weight:500;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact{background:var(--color-warm-white)}
+  .contact-grid{
+    margin-top:48px;
+    display:grid; grid-template-columns:1fr 1.1fr;
+    gap:56px;
+  }
+  @media (max-width:880px){.contact-grid{grid-template-columns:1fr; gap:40px}}
+
+  .contact-info{
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .contact-row{
+    display:flex; gap:18px; align-items:flex-start;
+    padding:22px 0;
+    border-bottom:1px solid var(--color-border-soft);
+  }
+  .contact-row:last-of-type{border-bottom:0}
+  .contact-row .icon{
+    width:42px; height:42px; flex-shrink:0;
+    border-radius:10px;
+    background:var(--color-copper-bg); color:var(--color-copper-dark);
+    display:grid; place-items:center;
+  }
+  .contact-row .icon svg{width:22px; height:22px; stroke-width:1.6}
+  .contact-row > div{flex:1; min-width:0}
+  .contact-row .label{font-size:11px; text-transform:uppercase; letter-spacing:.14em; color:var(--color-body-soft); font-weight:500}
+  .contact-row .val{font-family:var(--serif); font-size:19px; color:var(--color-dark); font-weight:500; margin-top:4px; line-height:1.3}
+  .contact-row .val a:hover{color:var(--color-copper-dark)}
+  .contact-row .sub{font-size:13.5px; color:var(--color-body); margin-top:2px}
+
+  .contact-callout{
+    margin-top:24px;
+    padding:24px 26px;
+    background:var(--color-dark);
+    color:var(--color-copper-nav);
+    border-radius:var(--r-lg);
+    display:flex; align-items:center; gap:18px;
+  }
+  .contact-callout .pulse{
+    width:10px; height:10px; border-radius:50%;
+    background:#7bd17b; flex-shrink:0;
+    box-shadow:0 0 0 0 rgba(123,209,123,.6);
+    animation:pulse 2s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(123,209,123,.6)}
+    70%{box-shadow:0 0 0 10px rgba(123,209,123,0)}
+    100%{box-shadow:0 0 0 0 rgba(123,209,123,0)}
+  }
+  .contact-callout strong{display:block; color:#fff; font-family:var(--serif); font-size:17px; font-weight:500}
+  .contact-callout span{font-size:13px; line-height:1.5}
+
+  /* Form */
+  .form-card{
+    background:#fff;
+    border:1px solid var(--color-border-soft);
+    border-radius:var(--r-lg);
+    padding:36px;
+    box-shadow:var(--shadow-md);
+  }
+  @media (max-width:520px){.form-card{padding:24px}}
+  .form-card h3{
+    font-size:22px; color:var(--color-dark);
+    margin-bottom:6px;
+  }
+  .form-card .form-sub{font-size:14px; color:var(--color-body-soft); margin-bottom:24px}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  @media (max-width:520px){.form-row{grid-template-columns:1fr}}
+  .field{
+    display:flex; flex-direction:column; gap:6px;
+    margin-bottom:14px;
+  }
+  .field label{
+    font-size:12px; font-weight:500;
+    color:var(--color-body);
+    letter-spacing:.04em;
+  }
+  .field label .req{color:var(--color-copper); margin-left:2px}
+  .field input, .field textarea, .field select{
+    font:inherit; font-size:15px;
+    padding:11px 14px;
+    border:.5px solid rgba(28,20,16,.25);
+    border-radius:var(--r-md);
+    background:#fff; color:var(--color-dark);
+    transition:border-color .15s ease, box-shadow .15s ease;
+    width:100%;
+  }
+  .field textarea{resize:vertical; min-height:120px; line-height:1.5}
+  .field input:focus, .field textarea:focus, .field select:focus{
+    outline:none;
+    border-color:var(--color-copper);
+    box-shadow:0 0 0 3px rgba(184,115,51,.15);
+  }
+  .field.error input, .field.error textarea{border-color:#c4554e}
+  .field .err-msg{font-size:12px; color:#c4554e; display:none}
+  .field.error .err-msg{display:block}
+
+  .form-actions{
+    margin-top:24px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+    flex-wrap:wrap;
+  }
+  .form-actions .note{font-size:12px; color:var(--color-body-soft); max-width:30ch}
+
+  .form-success{
+    display:none;
+    text-align:center; padding:40px 24px;
+  }
+  .form-success.show{display:block; animation:fadeIn .4s ease}
+  @keyframes fadeIn{from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:translateY(0)}}
+  .form-success .ok-icon{
+    width:64px; height:64px; border-radius:50%;
+    background:var(--color-copper-bg); color:var(--color-copper-dark);
+    display:grid; place-items:center; margin:0 auto 20px;
+  }
+  .form-success .ok-icon svg{width:32px; height:32px}
+  .form-success h3{font-size:22px; color:var(--color-dark); margin-bottom:8px}
+  .form-success p{color:var(--color-body); font-size:15px; max-width:36ch; margin:0 auto}
+
+  /* ---------- Footer ---------- */
+  footer.footer{
+    background:var(--color-dark);
+    color:#a09080;
+    padding:64px 0 32px;
+  }
+  .footer-grid{
+    display:grid; grid-template-columns:1.4fr 1fr 1fr;
+    gap:48px;
+    padding-bottom:48px;
+    border-bottom:1px solid rgba(200,168,130,.1);
+  }
+  @media (max-width:768px){.footer-grid{grid-template-columns:1fr; gap:36px}}
+  .footer-brand .brand-name{color:var(--color-copper-nav)}
+  .footer-brand p{margin-top:20px; font-size:14.5px; line-height:1.7; max-width:36ch; color:#a09080}
+  .footer-col h4{
+    color:#fff; font-family:var(--sans); font-size:12px;
+    font-weight:600; text-transform:uppercase; letter-spacing:.16em;
+    margin-bottom:18px;
+  }
+  .footer-col ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px}
+  .footer-col a{font-size:14.5px; transition:color .15s ease}
+  .footer-col a:hover{color:var(--color-copper-nav)}
+  .footer-col p{font-size:14px; line-height:1.7}
+
+  .footer-bottom{
+    padding-top:28px;
+    display:flex; justify-content:space-between; gap:16px;
+    font-size:12.5px; color:#7a6a5a;
+    flex-wrap:wrap;
+  }
+  .footer-bottom a{color:#a09080}
+  .footer-bottom a:hover{color:var(--color-copper-nav)}
+
+  /* ---------- Modal (Impressum) ---------- */
+  .modal-overlay{
+    position:fixed; inset:0; z-index:100;
+    background:rgba(28,20,16,.72);
+    backdrop-filter:blur(6px);
+    display:none;
+    align-items:center; justify-content:center;
+    padding:24px;
+    animation:fadeIn .2s ease;
+  }
+  .modal-overlay.show{display:flex}
+  .modal{
+    background:#fff;
+    border-radius:var(--r-lg);
+    max-width:560px; width:100%;
+    max-height:88vh; overflow:auto;
+    padding:40px;
+    position:relative;
+    box-shadow:0 30px 80px rgba(0,0,0,.4);
+    animation:popIn .25s ease;
+  }
+  @keyframes popIn{from{opacity:0; transform:scale(.96) translateY(8px)} to{opacity:1; transform:scale(1) translateY(0)}}
+  .modal h2{font-size:28px; color:var(--color-dark); margin-bottom:8px}
+  .modal-sub{font-size:13px; color:var(--color-body-soft); text-transform:uppercase; letter-spacing:.14em; margin-bottom:24px}
+  .modal h3{font-family:var(--sans); font-size:13px; font-weight:600; color:var(--color-copper-dark); text-transform:uppercase; letter-spacing:.12em; margin:24px 0 8px}
+  .modal h3:first-of-type{margin-top:0}
+  .modal p{font-size:15px; line-height:1.7; color:var(--color-body)}
+  .modal-close{
+    position:absolute; top:14px; right:14px;
+    width:36px; height:36px; border-radius:8px;
+    color:var(--color-body); background:var(--color-linen);
+    display:grid; place-items:center;
+    transition:background .15s, color .15s;
+  }
+  .modal-close:hover{background:var(--color-copper-bg); color:var(--color-copper-dark)}
+  .modal-close svg{width:18px; height:18px}
+
+  /* ---------- Reveal animations ---------- */
+  .reveal{opacity:0; transform:translateY(20px); transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1; transform:translateY(0)}
+
+  /* ---------- Utility ---------- */
+  .sr-only{position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+
+</style>
+</head>
+<body data-screen-label="01 Fink Spenglerei">
+
+<!-- ============== NAVIGATION ============== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="Fink Spenglerei und Bedachung, zur Startseite">
+      <span class="brand-mark" aria-hidden="true">
+        <!-- Roof glyph -->
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 11 12 4l9 7"/>
+          <path d="M5 10v9h14v-9"/>
+          <path d="M10 19v-5h4v5"/>
+        </svg>
+      </span>
+      <span>
+        <span class="brand-name">Fink</span>
+        <span class="brand-sub">Spenglerei · Bedachung</span>
+      </span>
+    </a>
+
+    <nav aria-label="Hauptnavigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#materialien">Materialien</a></li>
+        <li><a href="#beispiele">Beispiele</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <span class="nav-cta-wrap">
+      <a href="tel:08251891704" class="nav-cta">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        08251 89 17 04
+      </a>
+    </span>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+    </button>
+  </div>
+
+  <div class="nav-mobile" id="navMobile">
+    <a href="#leistungen">Leistungen</a>
+    <a href="#materialien">Materialien</a>
+    <a href="#beispiele">Beispiele</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="tel:08251891704" class="btn btn-primary">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+      08251 89 17 04
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============== HERO ============== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">Spenglerei &amp; Bedachung · Aichach</span>
+        <h1 id="hero-title">Service rund ums Dach <em>aus Meisterhand.</em></h1>
+        <p class="lead">Spengler- und Bedachungsarbeiten mit Charakter — vom feinen Kupferdetail bis zur kompletten Dachsanierung. Seit Jahren fest verwurzelt in Aichach und der Region.</p>
+        <div class="hero-cta">
+          <a href="#kontakt" class="btn btn-primary">
+            Jetzt Termin vereinbaren
+            <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#leistungen" class="btn btn-ghost">Unsere Leistungen</a>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <span class="k">Inhaber</span>
+            <span class="v">Marcus Fink</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="k">Standort</span>
+            <span class="v">Aichach · Oberbernbach</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="k">Beratung</span>
+            <span class="v">08251 89 17 04</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" style="position:relative">
+        <div class="hero-visual">
+          <img src="assets/hero-copper-facade.jpg" alt="Moderne Kupferfassade — Referenzobjekt von Fink Spenglerei" loading="eager" />
+          <div class="hero-caption">
+            <span class="corner">Referenz · Kupferfassade</span>
+          </div>
+        </div>
+
+        <div class="hero-floating top">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 7v6c0 4.5 3.4 8.5 8 9 4.6-.5 8-4.5 8-9V7l-8-5Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div class="meta">
+            <div class="t">Meisterbetrieb</div>
+            <div class="v">Höchste Qualität</div>
+          </div>
+        </div>
+
+        <div class="hero-floating bottom">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8Z"/></svg>
+          </div>
+          <div class="meta">
+            <div class="t">Regional</div>
+            <div class="v">Aichach &amp; Umgebung</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ABOUT ============== -->
+  <section class="about" id="ueber-uns" aria-labelledby="about-title">
+    <div class="container">
+      <div class="reveal" style="max-width:760px">
+        <span class="eyebrow">Über uns</span>
+        <h2 id="about-title" class="section-title">Handwerk, das jedem Gebäude das gewisse Etwas gibt.</h2>
+        <p class="section-lead">Spenglerarbeiten und eine moderne, zweckmäßige Bedachung machen den Unterschied. Wir beraten und planen kompetent — vom ersten Aufmaß bis zur fertigen Ausführung. Neueste Technologien und laufende Weiterbildung sichern die Qualität, die Sie von einem Meisterbetrieb erwarten.</p>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-card reveal">
+          <span class="num">01</span>
+          <h3>Meisterbetrieb</h3>
+          <p>Geleitet von Marcus Fink — Beratung, Planung und Ausführung aus einer Hand, persönlich und verbindlich.</p>
+        </div>
+        <div class="trust-card reveal" style="transition-delay:.08s">
+          <span class="num">02</span>
+          <h3>Regional verwurzelt</h3>
+          <p>Seit Jahren Ihr Partner in Aichach, Oberbernbach und der Region. Kurze Wege, schnelle Termine, faire Preise.</p>
+        </div>
+        <div class="trust-card reveal" style="transition-delay:.16s">
+          <span class="num">03</span>
+          <h3>Höchste Qualität</h3>
+          <p>Edle Materialien, neueste Technik, laufend geschulte Mitarbeiter — eine Verarbeitung, die jahrzehntelang hält.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SERVICES ============== -->
+  <section class="services" id="leistungen" aria-labelledby="services-title">
+    <div class="container">
+      <div class="services-head">
+        <div class="reveal">
+          <span class="eyebrow">Leistungen</span>
+          <h2 id="services-title" class="section-title">Das leisten wir für Sie.</h2>
+        </div>
+        <a href="#kontakt" class="btn btn-secondary reveal">
+          Beratung anfragen
+          <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v9h14v-9"/></svg>
+          </div>
+          <h3>Komplette Dachsanierung</h3>
+          <p class="desc">Von der Bestandsaufnahme bis zur fertigen Eindeckung — koordiniert und sauber abgewickelt.</p>
+        </article>
+
+        <article class="service-card reveal" style="transition-delay:.06s">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="1.5"/><path d="M3 10h18"/><path d="M8 14h2"/></svg>
+          </div>
+          <h3>Spenglerarbeiten</h3>
+          <p class="desc">Kupfer, Titanzink, Edelstahl — feine Handwerkskunst und langlebige Verarbeitung.</p>
+        </article>
+
+        <article class="service-card reveal" style="transition-delay:.12s">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M12 4v16"/><path d="M4 12h16"/></svg>
+          </div>
+          <h3>Dachfenster &amp; Ausbau</h3>
+          <p class="desc">Dachfenstereinbau (auch nachträglich) und kompletter Dachausbau aus einer Hand.</p>
+        </article>
+
+        <article class="service-card reveal" style="transition-delay:.18s">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18"/><path d="M5 17V9l7-4 7 4v8"/><path d="M9 17v-5h6v5"/></svg>
+          </div>
+          <h3>Flachdach &amp; Balkon</h3>
+          <p class="desc">Sichere Abdichtungen für Flachdach und Balkon — heute dicht, in vielen Jahren noch.</p>
+        </article>
+
+        <article class="service-card reveal" style="transition-delay:.24s">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20V10l6-6 6 6v10"/><rect x="9" y="13" width="6" height="7"/></svg>
+          </div>
+          <h3>Kamin &amp; Gauben</h3>
+          <p class="desc">Kaminverkleidungen, Kaminhüte und Dachgaubenverkleidungen — passgenau gefertigt.</p>
+        </article>
+
+        <article class="service-card reveal" style="transition-delay:.30s">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M3 6h18"/><path d="M3 18h18"/></svg>
+          </div>
+          <h3>Blechdächer</h3>
+          <p class="desc">Metalldächer und Trapezbleche für Wohnhaus, Hof und Industrie — robust und elegant.</p>
+        </article>
+
+        <article class="service-card reveal" style="transition-delay:.36s">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6c4 0 4 12 8 12s4-12 8-12"/></svg>
+          </div>
+          <h3>Rinnen &amp; Hohlkehlen</h3>
+          <p class="desc">Rinnenmontage, Rinnenheizungen, Hohlkehlen, Ortgangsblenden — sauber im Detail.</p>
+        </article>
+
+        <article class="service-card reveal" style="transition-delay:.42s">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V11l9-7 9 7v10"/><circle cx="12" cy="14" r="2"/></svg>
+          </div>
+          <h3>Maßanfertigungen</h3>
+          <p class="desc">Fensterbankverkleidungen, Mauerbleche, Sonderlösungen — sprechen Sie uns an.</p>
+        </article>
+      </div>
+
+      <div class="services-list reveal">
+        <h3>Alle Leistungen im Überblick</h3>
+        <ul>
+          <li>Sämtliche Spenglerarbeiten in Kupfer, Titanzink, Edelstahl</li>
+          <li>Komplette Dachsanierung</li>
+          <li>Einzelne Zimmererarbeiten</li>
+          <li>Dachausbau</li>
+          <li>Dachfenstereinbau (auch nachträglich)</li>
+          <li>Flachdach &amp; Balkonabdichtungen</li>
+          <li>Kamin- &amp; Dachgaubenverkleidungen</li>
+          <li>Blechdächer &amp; Trapezbleche</li>
+          <li>Metalldächer</li>
+          <li>Rinnenmontage &amp; Rinnenheizungen</li>
+          <li>Taubenabwehr &amp; Schneefanggitter</li>
+          <li>Hohlkehlen, Ortgangsblenden, Giebelverkleidungen</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== MATERIALS ============== -->
+  <section class="materials" id="materialien" aria-labelledby="mat-title">
+    <div class="container">
+      <div class="mat-layout">
+        <div class="reveal">
+          <div class="mat-visual" aria-hidden="true">
+            <span class="badge">Werkstoff · Kupfer</span>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <span class="eyebrow">Materialien</span>
+          <h2 id="mat-title" class="section-title">Edle Werkstoffe, sorgfältig verarbeitet.</h2>
+          <p class="section-lead">Wir arbeiten mit den Materialien, die zu Ihrem Gebäude passen — von klassischem Kupfer bis zum modernen Edelstahlblech.</p>
+
+          <div class="mat-list">
+            <div class="mat-item">
+              <span class="mat-swatch" style="background:linear-gradient(135deg,#c8884a,#7a4a1a)"></span>
+              <div><div class="name">Kupfer</div><div class="sub">klassisch · langlebig</div></div>
+            </div>
+            <div class="mat-item">
+              <span class="mat-swatch" style="background:linear-gradient(135deg,#c4cbd2,#7d858d)"></span>
+              <div><div class="name">Titanzink</div><div class="sub">edel · wartungsarm</div></div>
+            </div>
+            <div class="mat-item">
+              <span class="mat-swatch" style="background:linear-gradient(135deg,#dcdcdc,#8a8a8a)"></span>
+              <div><div class="name">Verzinktes Stahlblech</div><div class="sub">robust · wirtschaftlich</div></div>
+            </div>
+            <div class="mat-item">
+              <span class="mat-swatch" style="background:linear-gradient(135deg,#e4e8ec,#a1a8b0)"></span>
+              <div><div class="name">Edelstahlblech</div><div class="sub">hochwertig · zeitlos</div></div>
+            </div>
+            <div class="mat-item">
+              <span class="mat-swatch" style="background:linear-gradient(135deg,#7a7a82,#3a3a40)"></span>
+              <div><div class="name">Bleiblech</div><div class="sub">flexibel · dichtend</div></div>
+            </div>
+            <div class="mat-item">
+              <span class="mat-swatch" style="background:linear-gradient(135deg,#ecedef,#b8bbc0)"></span>
+              <div><div class="name">Aluminiumblech</div><div class="sub">leicht · korrosionsfest</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== REFERENCES ============== -->
+  <section class="references" id="beispiele" aria-labelledby="ref-title">
+    <div class="container">
+      <div class="reveal" style="max-width:680px">
+        <span class="eyebrow">Referenzen &amp; Beispiele</span>
+        <h2 id="ref-title" class="section-title">Eine kleine Auswahl unserer Arbeiten.</h2>
+        <p class="section-lead">Hier möchten wir Ihnen einige Projekte zeigen — natürlich nur ein Ausschnitt. Gern erarbeiten wir mit Ihnen gemeinsam eine individuelle Lösung für Ihr Haus.</p>
+      </div>
+
+      <div class="ref-grid">
+        <article class="ref-card reveal">
+          <div class="ref-img"><img src="assets/ref-gauben-zink.jpg" alt="Reihe von Dachgauben mit Titanzink-Verkleidung auf einem historischen Ziegeldach" loading="lazy" /><span class="badge">Dachgauben</span></div>
+          <div class="ref-body"><h3>Historisches Dach · Gaubenreihe</h3><p>Mehrere Dachgauben in Titanzink, eingebettet in eine neue Ziegeleindeckung.</p></div>
+        </article>
+        <article class="ref-card reveal" style="transition-delay:.06s">
+          <div class="ref-img"><img src="assets/ref-zink-gaube.jpg" alt="Einzelne Gaube mit Titanzink-Verkleidung auf rotem Ziegeldach" loading="lazy" /><span class="badge">Titanzink</span></div>
+          <div class="ref-body"><h3>Wohnhaus · Gaubenverkleidung</h3><p>Titanzink-Detail mit präzisem Anschluss an die bestehende Eindeckung.</p></div>
+        </article>
+        <article class="ref-card reveal" style="transition-delay:.12s">
+          <div class="ref-img"><img src="assets/ref-box-gaube.jpg" alt="Moderne Box-Dachgaube mit Kamin und Kupferdetails am Anschluss" loading="lazy" /><span class="badge">Gaube &amp; Kamin</span></div>
+          <div class="ref-body"><h3>Box-Gaube mit Kaminanschluss</h3><p>Saubere Verblechung von Gaube und Kamin im Detail.</p></div>
+        </article>
+        <article class="ref-card reveal" style="transition-delay:.18s">
+          <div class="ref-img"><img src="assets/ref-neubau.jpg" alt="Neubau mit roter Holzfassade und weißem Putzbau, Spenglerarbeiten an den Detailanschlüssen" loading="lazy" /><span class="badge">Neubau</span></div>
+          <div class="ref-body"><h3>Modernes Wohnhaus</h3><p>Spenglerarbeiten an einer modernen Holz-/Putzfassade mit Dachterrasse.</p></div>
+        </article>
+        <article class="ref-card reveal" style="transition-delay:.24s">
+          <div class="ref-img"><img src="assets/ref-sanierung.jpg" alt="Wohnhaus während der Dachsanierung mit Gerüst und Fink-Spenglerei-Schild" loading="lazy" /><span class="badge">Sanierung</span></div>
+          <div class="ref-body"><h3>Komplette Dachsanierung</h3><p>Vollständige Erneuerung von Eindeckung, Gauben und Spengleranschlüssen.</p></div>
+        </article>
+        <article class="ref-card reveal" style="transition-delay:.30s">
+          <div class="ref-img"><img src="assets/ref-stadthaus.jpg" alt="Stadthaus mit Erker und ausgeführten Spenglerarbeiten" loading="lazy" /><span class="badge">Stadthaus</span></div>
+          <div class="ref-body"><h3>Stadthaus · Erker &amp; Gauben</h3><p>Verblechung am Erker mit Anschlüssen an Fenster und Dachhaut.</p></div>
+        </article>
+      </div>
+
+      <div class="ref-feature reveal">
+        <div class="ref-feature-img">
+          <img src="assets/ref-autohaus.jpg" alt="Autohaus Schrobenhausen mit ausgeführten Dach- und Fassadenarbeiten in Titanzink" loading="lazy" />
+        </div>
+        <div class="ref-feature-text">
+          <div class="label">Bekannte Referenz</div>
+          <div class="name">Autohaus Schrobenhausen</div>
+          <div class="desc">Dach &amp; Fassade — großflächige Spenglerarbeiten an einem gewerblichen Gebäude.</div>
+        </div>
+        <span class="badge badge-dark">Gewerblich · Großprojekt</span>
+      </div>
+
+      <figure class="quote-feature reveal">
+        <div class="qf-img">
+          <img src="assets/ref-fledermaus.jpg" alt="Kunstvoll aus Kupfer gefertigte Fledermaus als Dachdetail — Beispiel für eine Maßanfertigung von Fink Spenglerei" loading="lazy" />
+          <span class="badge">Maßanfertigung</span>
+        </div>
+        <blockquote class="qf-text">
+          <span class="qf-mark" aria-hidden="true">„</span>
+          Geht nicht, gibt's nicht. Auch für Außergewöhnliches sind wir gern zu haben — sprechen Sie mit uns über Ihre Ideen und Wünsche.
+          <span class="quote-author">— Marcus Fink, Inhaber</span>
+        </blockquote>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============== CONTACT ============== -->
+  <section class="contact" id="kontakt" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="reveal" style="max-width:680px">
+        <span class="eyebrow">Kontakt</span>
+        <h2 id="contact-title" class="section-title">Kontaktieren Sie uns.</h2>
+        <p class="section-lead">Wir freuen uns auf Ihren Anruf, Ihre E-Mail oder Ihre Nachricht über das Formular. Eine unverbindliche Beratung ist für uns selbstverständlich.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-row">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8Z"/></svg>
+            </span>
+            <div>
+              <div class="label">Adresse</div>
+              <div class="val">Am Straßberg 4a</div>
+              <div class="sub">86551 Aichach / Oberbernbach</div>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            </span>
+            <div>
+              <div class="label">Telefon &amp; Fax</div>
+              <div class="val"><a href="tel:08251891704">08251 – 891704</a></div>
+              <div class="sub">Fax: 08251 – 891705</div>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+            </span>
+            <div>
+              <div class="label">E-Mail</div>
+              <div class="val"><a href="mailto:dachfink@t-online.de">dachfink@t-online.de</a></div>
+              <div class="sub">Antwort in der Regel innerhalb eines Werktags.</div>
+            </div>
+          </div>
+
+          <div class="contact-callout">
+            <span class="pulse" aria-hidden="true"></span>
+            <div>
+              <strong>Unverbindliche Beratung</strong>
+              <span>Termin telefonisch unter 08251 89 17 04 — wir nehmen uns Zeit.</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="form-card reveal" id="contactForm" novalidate>
+          <h3>Anfrage senden</h3>
+          <p class="form-sub">Erzählen Sie uns von Ihrem Vorhaben — wir melden uns zeitnah zurück.</p>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+              <input id="name" name="name" type="text" required autocomplete="name" placeholder="Vor- und Nachname"/>
+              <span class="err-msg">Bitte geben Sie Ihren Namen an.</span>
+            </div>
+            <div class="field">
+              <label for="phone">Telefon</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="z. B. 08251 …"/>
+              <span class="err-msg">Bitte gültige Telefonnummer.</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">E-Mail <span class="req" aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder="ihre@adresse.de"/>
+            <span class="err-msg">Bitte gültige E-Mail-Adresse.</span>
+          </div>
+
+          <div class="field">
+            <label for="topic">Thema</label>
+            <select id="topic" name="topic">
+              <option>Beratungstermin</option>
+              <option>Dachsanierung</option>
+              <option>Spenglerarbeiten</option>
+              <option>Dachfenster / Ausbau</option>
+              <option>Flachdach / Balkon</option>
+              <option>Sonstiges</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Nachricht <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" required placeholder="Worum geht es?"></textarea>
+            <span class="err-msg">Bitte schreiben Sie uns ein paar Worte.</span>
+          </div>
+
+          <div class="form-actions">
+            <p class="note">Mit dem Absenden erklären Sie sich mit der Bearbeitung Ihrer Anfrage einverstanden.</p>
+            <button type="submit" class="btn btn-primary">
+              Anfrage senden
+              <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+
+          <div class="form-success" id="formSuccess">
+            <div class="ok-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Vielen Dank!</h3>
+            <p>Ihre Nachricht ist bei uns angekommen. Wir melden uns zeitnah bei Ihnen zurück.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============== FOOTER ============== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v9h14v-9"/><path d="M10 19v-5h4v5"/></svg>
+          </span>
+          <span>
+            <span class="brand-name">Fink</span>
+            <span class="brand-sub">Spenglerei · Bedachung</span>
+          </span>
+        </a>
+        <p>Service rund ums Dach aus Meisterhand. Inhaber Marcus Fink, Aichach / Oberbernbach.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#materialien">Materialien</a></li>
+          <li><a href="#beispiele">Beispiele</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="#" id="openImpressum">Impressum</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <p>Am Straßberg 4a<br/>86551 Aichach / Oberbernbach</p>
+        <p style="margin-top:14px">
+          Tel <a href="tel:08251891704">08251 – 891704</a><br/>
+          Fax 08251 – 891705<br/>
+          <a href="mailto:dachfink@t-online.de">dachfink@t-online.de</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Fink Spenglerei &amp; Bedachung · Marcus Fink</span>
+      <span>www.dachfink.de · <a href="#" id="openImpressum2">Impressum</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============== IMPRESSUM MODAL ============== -->
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <button class="modal-close" id="modalClose" aria-label="Impressum schließen">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="modal-sub">Angaben gemäß § 5 TMG</div>
+    <h2 id="modal-title">Impressum</h2>
+
+    <h3>Anbieter</h3>
+    <p>Fink Spenglerei &amp; Bedachung<br/>Inhaber Marcus Fink<br/>Am Straßberg 4a<br/>86551 Aichach / Oberbernbach</p>
+
+    <h3>Kontakt</h3>
+    <p>Telefon: 08251 – 891704<br/>Fax: 08251 – 891705<br/>E-Mail: <a href="mailto:dachfink@t-online.de" style="color:var(--color-copper-dark)">dachfink@t-online.de</a><br/>Web: www.dachfink.de</p>
+
+    <h3>Steuernummer</h3>
+    <p>9102-216-909 88</p>
+
+    <h3>Verantwortlich für den Inhalt</h3>
+    <p>Marcus Fink (Anschrift wie oben)</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile nav toggle
+  const nav = document.getElementById('nav');
+  const navToggle = document.getElementById('navToggle');
+  const navMobile = document.getElementById('navMobile');
+  navToggle.addEventListener('click', function(){
+    const open = nav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true':'false');
+  });
+  navMobile.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      nav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded','false');
+    });
+  });
+
+  // Active-section highlighting in desktop nav
+  const navLinks = document.querySelectorAll('#navLinks a');
+  const sections = ['leistungen','materialien','beispiele','kontakt']
+    .map(function(id){ return document.getElementById(id); })
+    .filter(Boolean);
+
+  function setActive(id){
+    navLinks.forEach(function(a){
+      const match = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('active', match);
+    });
+  }
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(function(entries){
+      // Pick the entry whose section is most visible & near the top
+      let best = null;
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          if (!best || e.intersectionRatio > best.intersectionRatio) best = e;
+        }
+      });
+      if (best && best.target.id){
+        setActive(best.target.id);
+      }
+    }, {
+      rootMargin: '-30% 0px -55% 0px',
+      threshold: [0, 0.25, 0.5, 0.75, 1]
+    });
+    sections.forEach(function(s){ io.observe(s); });
+  }
+
+  // Reveal on scroll
+  if ('IntersectionObserver' in window){
+    const ro = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          e.target.classList.add('in');
+          ro.unobserve(e.target);
+        }
+      });
+    }, { rootMargin:'0px 0px -10% 0px', threshold:0.1 });
+    document.querySelectorAll('.reveal').forEach(function(el){ ro.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // Impressum modal
+  const modal = document.getElementById('modal');
+  function openModal(e){ if(e) e.preventDefault(); modal.classList.add('show'); document.body.style.overflow='hidden'; }
+  function closeModal(){ modal.classList.remove('show'); document.body.style.overflow=''; }
+  document.getElementById('openImpressum').addEventListener('click', openModal);
+  document.getElementById('openImpressum2').addEventListener('click', openModal);
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  // Contact form
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    let ok = true;
+    const name = form.querySelector('#name');
+    const email = form.querySelector('#email');
+    const msg = form.querySelector('#message');
+
+    [name, email, msg].forEach(function(f){
+      f.parentElement.classList.remove('error');
+    });
+
+    if (!name.value.trim()){ name.parentElement.classList.add('error'); ok = false; }
+    if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){
+      email.parentElement.classList.add('error'); ok = false;
+    }
+    if (!msg.value.trim()){ msg.parentElement.classList.add('error'); ok = false; }
+
+    if (!ok) return;
+
+    // Hide form fields, show success
+    Array.from(form.children).forEach(function(c){
+      if (c.id !== 'formSuccess') c.style.display = 'none';
+    });
+    success.classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>
