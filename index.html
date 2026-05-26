@@ -143,6 +143,9 @@
     display:flex; align-items:center; gap:12px;
     color:var(--color-copper-nav);
   }
+  .brand-logo{
+    height:44px; width:auto; display:block;
+  }
   .brand-mark{
     width:34px; height:34px; flex-shrink:0;
     border-radius:6px;
@@ -444,25 +447,31 @@
   .mat-visual{
     aspect-ratio:1/1;
     border-radius:var(--r-lg);
-    background:
-      conic-gradient(from 135deg at 50% 50%,
-        #c8884a 0deg, #b87333 60deg, #a26429 120deg, #7a4a1a 180deg,
-        #a26429 240deg, #b87333 300deg, #c8884a 360deg);
+    background:var(--color-linen);
     box-shadow:var(--shadow-lg);
     position:relative;
     overflow:hidden;
   }
+  .mat-visual img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    transition:opacity .35s ease;
+    z-index:0;
+  }
   .mat-visual::before{
-    content:""; position:absolute; inset:0;
+    content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
     background:
-      repeating-linear-gradient(45deg, rgba(255,255,255,.08) 0 1px, transparent 1px 8px),
-      repeating-linear-gradient(-45deg, rgba(28,20,16,.10) 0 1px, transparent 1px 12px);
+      repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0 1px, transparent 1px 8px),
+      repeating-linear-gradient(-45deg, rgba(28,20,16,.06) 0 1px, transparent 1px 12px);
   }
   .mat-visual .badge{
-    position:absolute; bottom:24px; left:24px;
+    position:absolute; bottom:24px; left:24px; z-index:2;
     background:rgba(28,20,16,.86); color:var(--color-copper-nav);
     backdrop-filter:blur(8px);
   }
+  .mat-item{cursor:pointer}
+  .mat-item.active{border-color:var(--color-copper); background:var(--color-copper-bg)}
   .mat-list{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:36px}
   @media (max-width:520px){.mat-list{grid-template-columns:1fr}}
   .mat-item{
@@ -498,6 +507,7 @@
     border:1px solid var(--color-border-soft);
     transition:transform .25s ease, box-shadow .25s ease;
     cursor:pointer;
+    display:flex; flex-direction:column;
   }
   .ref-card:hover{transform:translateY(-3px); box-shadow:var(--shadow-md)}
   .ref-img{
@@ -519,7 +529,7 @@
   .ref-img.ph-1, .ref-img.ph-2, .ref-img.ph-3,
   .ref-img.ph-4, .ref-img.ph-5, .ref-img.ph-6{display:none}
   .ref-img .badge{position:absolute; top:16px; left:16px; background:rgba(28,20,16,.86); color:var(--color-copper-nav); backdrop-filter:blur(6px)}
-  .ref-body{padding:20px 22px 24px}
+  .ref-body{padding:20px 22px 24px; flex:1}
   .ref-body h3{font-size:18px; color:var(--color-dark); margin-bottom:6px}
   .ref-body p{font-size:13.5px; color:var(--color-body-soft)}
 
@@ -539,7 +549,7 @@
     position:relative;
     align-self:stretch;
     min-height:160px;
-    background:var(--color-linen);
+    background:linear-gradient(160deg, var(--color-copper-bg) 0%, var(--color-linen) 100%);
     overflow:hidden;
   }
   @media (max-width:680px){.ref-feature-img{aspect-ratio:16/9; min-height:0}}
@@ -559,7 +569,7 @@
   }
 
   .quote-feature{
-    margin-top:48px;
+    margin:48px 0 0;
     display:grid;
     grid-template-columns:260px 1fr;
     gap:0;
@@ -615,10 +625,9 @@
   .contact{background:var(--color-warm-white)}
   .contact-grid{
     margin-top:48px;
-    display:grid; grid-template-columns:1fr 1.1fr;
-    gap:56px;
+    max-width:600px;
+    margin-inline:auto;
   }
-  @media (max-width:880px){.contact-grid{grid-template-columns:1fr; gap:40px}}
 
   .contact-info{
     display:flex; flex-direction:column; gap:8px;
@@ -663,73 +672,6 @@
   }
   .contact-callout strong{display:block; color:#fff; font-family:var(--serif); font-size:17px; font-weight:500}
   .contact-callout span{font-size:13px; line-height:1.5}
-
-  /* Form */
-  .form-card{
-    background:#fff;
-    border:1px solid var(--color-border-soft);
-    border-radius:var(--r-lg);
-    padding:36px;
-    box-shadow:var(--shadow-md);
-  }
-  @media (max-width:520px){.form-card{padding:24px}}
-  .form-card h3{
-    font-size:22px; color:var(--color-dark);
-    margin-bottom:6px;
-  }
-  .form-card .form-sub{font-size:14px; color:var(--color-body-soft); margin-bottom:24px}
-  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:14px}
-  @media (max-width:520px){.form-row{grid-template-columns:1fr}}
-  .field{
-    display:flex; flex-direction:column; gap:6px;
-    margin-bottom:14px;
-  }
-  .field label{
-    font-size:12px; font-weight:500;
-    color:var(--color-body);
-    letter-spacing:.04em;
-  }
-  .field label .req{color:var(--color-copper); margin-left:2px}
-  .field input, .field textarea, .field select{
-    font:inherit; font-size:15px;
-    padding:11px 14px;
-    border:.5px solid rgba(28,20,16,.25);
-    border-radius:var(--r-md);
-    background:#fff; color:var(--color-dark);
-    transition:border-color .15s ease, box-shadow .15s ease;
-    width:100%;
-  }
-  .field textarea{resize:vertical; min-height:120px; line-height:1.5}
-  .field input:focus, .field textarea:focus, .field select:focus{
-    outline:none;
-    border-color:var(--color-copper);
-    box-shadow:0 0 0 3px rgba(184,115,51,.15);
-  }
-  .field.error input, .field.error textarea{border-color:#c4554e}
-  .field .err-msg{font-size:12px; color:#c4554e; display:none}
-  .field.error .err-msg{display:block}
-
-  .form-actions{
-    margin-top:24px;
-    display:flex; align-items:center; justify-content:space-between; gap:16px;
-    flex-wrap:wrap;
-  }
-  .form-actions .note{font-size:12px; color:var(--color-body-soft); max-width:30ch}
-
-  .form-success{
-    display:none;
-    text-align:center; padding:40px 24px;
-  }
-  .form-success.show{display:block; animation:fadeIn .4s ease}
-  @keyframes fadeIn{from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:translateY(0)}}
-  .form-success .ok-icon{
-    width:64px; height:64px; border-radius:50%;
-    background:var(--color-copper-bg); color:var(--color-copper-dark);
-    display:grid; place-items:center; margin:0 auto 20px;
-  }
-  .form-success .ok-icon svg{width:32px; height:32px}
-  .form-success h3{font-size:22px; color:var(--color-dark); margin-bottom:8px}
-  .form-success p{color:var(--color-body); font-size:15px; max-width:36ch; margin:0 auto}
 
   /* ---------- Footer ---------- */
   footer.footer{
@@ -817,18 +759,7 @@
 <header class="nav" id="nav">
   <div class="nav-inner">
     <a href="#top" class="brand" aria-label="Fink Spenglerei und Bedachung, zur Startseite">
-      <span class="brand-mark" aria-hidden="true">
-        <!-- Roof glyph -->
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 11 12 4l9 7"/>
-          <path d="M5 10v9h14v-9"/>
-          <path d="M10 19v-5h4v5"/>
-        </svg>
-      </span>
-      <span>
-        <span class="brand-name">Fink</span>
-        <span class="brand-sub">Spenglerei · Bedachung</span>
-      </span>
+      <img src="assets/logo.png" alt="Fink Spenglerei & Bedachung" class="brand-logo">
     </a>
 
     <nav aria-label="Hauptnavigation">
@@ -899,9 +830,7 @@
       <div class="reveal" style="position:relative">
         <div class="hero-visual">
           <img src="assets/hero-copper-facade.jpg" alt="Moderne Kupferfassade — Referenzobjekt von Fink Spenglerei" loading="eager" />
-          <div class="hero-caption">
-            <span class="corner">Referenz · Kupferfassade</span>
-          </div>
+
         </div>
 
         <div class="hero-floating top">
@@ -1062,7 +991,8 @@
       <div class="mat-layout">
         <div class="reveal">
           <div class="mat-visual" aria-hidden="true">
-            <span class="badge">Werkstoff · Kupfer</span>
+            <img id="mat-img" src="assets/materialien/kupfer.png" alt="Kupfer" />
+            <span class="badge" id="mat-badge">Werkstoff · Kupfer</span>
           </div>
         </div>
 
@@ -1072,7 +1002,7 @@
           <p class="section-lead">Wir arbeiten mit den Materialien, die zu Ihrem Gebäude passen — von klassischem Kupfer bis zum modernen Edelstahlblech.</p>
 
           <div class="mat-list">
-            <div class="mat-item">
+            <div class="mat-item active">
               <span class="mat-swatch" style="background:linear-gradient(135deg,#c8884a,#7a4a1a)"></span>
               <div><div class="name">Kupfer</div><div class="sub">klassisch · langlebig</div></div>
             </div>
@@ -1167,10 +1097,10 @@
   <!-- ============== CONTACT ============== -->
   <section class="contact" id="kontakt" aria-labelledby="contact-title">
     <div class="container">
-      <div class="reveal" style="max-width:680px">
+      <div class="reveal" style="max-width:680px; margin-inline:auto; text-align:center">
         <span class="eyebrow">Kontakt</span>
         <h2 id="contact-title" class="section-title">Kontaktieren Sie uns.</h2>
-        <p class="section-lead">Wir freuen uns auf Ihren Anruf, Ihre E-Mail oder Ihre Nachricht über das Formular. Eine unverbindliche Beratung ist für uns selbstverständlich.</p>
+        <p class="section-lead">Wir freuen uns auf Ihren Anruf oder Ihre E-Mail. Eine unverbindliche Beratung ist für uns selbstverständlich.</p>
       </div>
 
       <div class="contact-grid">
@@ -1217,63 +1147,6 @@
           </div>
         </div>
 
-        <form class="form-card reveal" id="contactForm" novalidate>
-          <h3>Anfrage senden</h3>
-          <p class="form-sub">Erzählen Sie uns von Ihrem Vorhaben — wir melden uns zeitnah zurück.</p>
-
-          <div class="form-row">
-            <div class="field">
-              <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
-              <input id="name" name="name" type="text" required autocomplete="name" placeholder="Vor- und Nachname"/>
-              <span class="err-msg">Bitte geben Sie Ihren Namen an.</span>
-            </div>
-            <div class="field">
-              <label for="phone">Telefon</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="z. B. 08251 …"/>
-              <span class="err-msg">Bitte gültige Telefonnummer.</span>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="email">E-Mail <span class="req" aria-hidden="true">*</span></label>
-            <input id="email" name="email" type="email" required autocomplete="email" placeholder="ihre@adresse.de"/>
-            <span class="err-msg">Bitte gültige E-Mail-Adresse.</span>
-          </div>
-
-          <div class="field">
-            <label for="topic">Thema</label>
-            <select id="topic" name="topic">
-              <option>Beratungstermin</option>
-              <option>Dachsanierung</option>
-              <option>Spenglerarbeiten</option>
-              <option>Dachfenster / Ausbau</option>
-              <option>Flachdach / Balkon</option>
-              <option>Sonstiges</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="message">Nachricht <span class="req" aria-hidden="true">*</span></label>
-            <textarea id="message" name="message" required placeholder="Worum geht es?"></textarea>
-            <span class="err-msg">Bitte schreiben Sie uns ein paar Worte.</span>
-          </div>
-
-          <div class="form-actions">
-            <p class="note">Mit dem Absenden erklären Sie sich mit der Bearbeitung Ihrer Anfrage einverstanden.</p>
-            <button type="submit" class="btn btn-primary">
-              Anfrage senden
-              <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
-          </div>
-
-          <div class="form-success" id="formSuccess">
-            <div class="ok-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <h3>Vielen Dank!</h3>
-            <p>Ihre Nachricht ist bei uns angekommen. Wir melden uns zeitnah bei Ihnen zurück.</p>
-          </div>
-        </form>
       </div>
     </div>
   </section>
@@ -1285,13 +1158,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#top" class="brand">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v9h14v-9"/><path d="M10 19v-5h4v5"/></svg>
-          </span>
-          <span>
-            <span class="brand-name">Fink</span>
-            <span class="brand-sub">Spenglerei · Bedachung</span>
-          </span>
+          <img src="assets/logo.png" alt="Fink Spenglerei & Bedachung" class="brand-logo">
         </a>
         <p>Service rund ums Dach aus Meisterhand. Inhaber Marcus Fink, Aichach / Oberbernbach.</p>
       </div>
@@ -1415,6 +1282,40 @@
     document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
   }
 
+  // Materials image switcher
+  var matImages = [
+    ['assets/materialien/kupfer.png'],
+    ['assets/materialien/titanzink.png'],
+    ['assets/materialien/verzinktes stahlbleck.png'],
+    ['assets/materialien/edelstahlblech.png'],
+    ['assets/materialien/bleiblech.png'],
+    ['assets/materialien/alumminiumblech.png'],
+  ];
+  var matLabels = ['Kupfer','Titanzink','Verzinktes Stahlblech','Edelstahlblech','Bleiblech','Aluminiumblech'];
+  var matImgEl = document.getElementById('mat-img');
+  var matBadgeEl = document.getElementById('mat-badge');
+  var matItemEls = document.querySelectorAll('.mat-item');
+  var matImgIdxs = matImages.map(function(){ return 0; });
+  var activeMatIdx = 0;
+
+  matItemEls.forEach(function(item, i) {
+    item.addEventListener('click', function() {
+      if (i === activeMatIdx) {
+        matImgIdxs[i] = (matImgIdxs[i] + 1) % matImages[i].length;
+      } else {
+        matItemEls[activeMatIdx].classList.remove('active');
+        item.classList.add('active');
+        activeMatIdx = i;
+        matImgIdxs[i] = 0;
+      }
+      matImgEl.style.opacity = '0';
+      matImgEl.onload = function() { matImgEl.style.opacity = '1'; };
+      matImgEl.src = matImages[i][matImgIdxs[i]];
+      if (matImgEl.complete) matImgEl.style.opacity = '1';
+      matBadgeEl.textContent = 'Werkstoff · ' + matLabels[i];
+    });
+  });
+
   // Impressum modal
   const modal = document.getElementById('modal');
   function openModal(e){ if(e) e.preventDefault(); modal.classList.add('show'); document.body.style.overflow='hidden'; }
@@ -1425,34 +1326,6 @@
   modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
 
-  // Contact form
-  const form = document.getElementById('contactForm');
-  const success = document.getElementById('formSuccess');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    let ok = true;
-    const name = form.querySelector('#name');
-    const email = form.querySelector('#email');
-    const msg = form.querySelector('#message');
-
-    [name, email, msg].forEach(function(f){
-      f.parentElement.classList.remove('error');
-    });
-
-    if (!name.value.trim()){ name.parentElement.classList.add('error'); ok = false; }
-    if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){
-      email.parentElement.classList.add('error'); ok = false;
-    }
-    if (!msg.value.trim()){ msg.parentElement.classList.add('error'); ok = false; }
-
-    if (!ok) return;
-
-    // Hide form fields, show success
-    Array.from(form.children).forEach(function(c){
-      if (c.id !== 'formSuccess') c.style.display = 'none';
-    });
-    success.classList.add('show');
-  });
 })();
 </script>
 </body>
